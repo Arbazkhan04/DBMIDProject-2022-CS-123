@@ -49,8 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\Advisor.cs" />
     <Compile Include="BL\Person.cs" />
     <Compile Include="BL\Student.cs" />
+    <Compile Include="DL\AdvisorDl.cs" />
     <Compile Include="DL\Configuration.cs" />
     <Compile Include="DL\PersonDl.cs" />
     <Compile Include="DL\StudentDl.cs" />

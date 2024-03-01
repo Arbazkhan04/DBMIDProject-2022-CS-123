@@ -22,7 +22,6 @@ namespace DBMIDProject_2022_CS_123l.DL
             cmd.Parameters.AddWithValue("@DateOfBirth", person.dateOfBirth);
             cmd.Parameters.AddWithValue("@Gender", person.gender);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Data saved successfully");
         }
     }
 }

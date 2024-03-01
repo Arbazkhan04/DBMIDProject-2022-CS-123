@@ -1,0 +1,12 @@
+G:\DBMIDProject-2022-CS-123l\DBMIDProject-2022-CS-123l\bin\Debug\DBMIDProject-2022-CS-123l.exe.config
+G:\DBMIDProject-2022-CS-123l\DBMIDProject-2022-CS-123l\bin\Debug\DBMIDProject-2022-CS-123l.exe
+G:\DBMIDProject-2022-CS-123l\DBMIDProject-2022-CS-123l\bin\Debug\DBMIDProject-2022-CS-123l.pdb
+G:\DBMIDProject-2022-CS-123l\DBMIDProject-2022-CS-123l\bin\Debug\MaterialSkin.dll
+G:\DBMIDProject-2022-CS-123l\DBMIDProject-2022-CS-123l\obj\Debug\DBMIDProject-2022-CS-123l.csproj.AssemblyReference.cache
+G:\DBMIDProject-2022-CS-123l\DBMIDProject-2022-CS-123l\obj\Debug\DBMIDProject_2022_CS_123l.Form1.resources
+G:\DBMIDProject-2022-CS-123l\DBMIDProject-2022-CS-123l\obj\Debug\DBMIDProject_2022_CS_123l.Properties.Resources.resources
+G:\DBMIDProject-2022-CS-123l\DBMIDProject-2022-CS-123l\obj\Debug\DBMIDProject-2022-CS-123l.csproj.GenerateResource.cache
+G:\DBMIDProject-2022-CS-123l\DBMIDProject-2022-CS-123l\obj\Debug\DBMIDProject-2022-CS-123l.csproj.CoreCompileInputs.cache
+G:\DBMIDProject-2022-CS-123l\DBMIDProject-2022-CS-123l\obj\Debug\DBMIDProject-2022-CS-123l.csproj.CopyComplete
+G:\DBMIDProject-2022-CS-123l\DBMIDProject-2022-CS-123l\obj\Debug\DBMIDProject-2022-CS-123l.exe
+G:\DBMIDProject-2022-CS-123l\DBMIDProject-2022-CS-123l\obj\Debug\DBMIDProject-2022-CS-123l.pdb

@@ -51,10 +51,12 @@
   <ItemGroup>
     <Compile Include="BL\Advisor.cs" />
     <Compile Include="BL\Person.cs" />
+    <Compile Include="BL\Project.cs" />
     <Compile Include="BL\Student.cs" />
     <Compile Include="DL\AdvisorDl.cs" />
     <Compile Include="DL\Configuration.cs" />
     <Compile Include="DL\PersonDl.cs" />
+    <Compile Include="DL\ProjectDl.cs" />
     <Compile Include="DL\StudentDl.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

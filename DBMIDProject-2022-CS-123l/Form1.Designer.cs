@@ -51,10 +51,10 @@
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.fname = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.advisorPage = new System.Windows.Forms.TabPage();
-            this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.DesignationComboBox = new System.Windows.Forms.ComboBox();
+            this.advisorDesignation = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
+            this.advisorSalary = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.advisorDataGridView2 = new System.Windows.Forms.DataGridView();
             this.advisorComboBox = new System.Windows.Forms.ComboBox();
             this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -69,15 +69,25 @@
             this.advisorLname = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
             this.advisorFname = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.advisorSalary = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
-            this.advisorDesignation = new MaterialSkin.Controls.MaterialLabel();
-            this.DesignationComboBox = new System.Windows.Forms.ComboBox();
+            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl2 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.title = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel16 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
+            this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl1.SuspendLayout();
             this.studentPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -85,6 +95,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.advisorDataGridView2)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.materialTabControl2.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -451,65 +463,58 @@
             this.advisorPage.Text = "Manage Advisor";
             this.advisorPage.Click += new System.EventHandler(this.advisorPage_Click);
             // 
-            // materialTabSelector1
+            // DesignationComboBox
             // 
-            this.materialTabSelector1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialTabSelector1.BaseTabControl = this.materialTabControl1;
-            this.materialTabSelector1.Depth = 0;
-            this.materialTabSelector1.Location = new System.Drawing.Point(-1, 64);
-            this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialTabSelector1.Name = "materialTabSelector1";
-            this.materialTabSelector1.Size = new System.Drawing.Size(1438, 36);
-            this.materialTabSelector1.TabIndex = 1;
-            this.materialTabSelector1.Text = "materialTabSelector1";
-            this.materialTabSelector1.Click += new System.EventHandler(this.materialTabSelector1_Click);
+            this.DesignationComboBox.FormattingEnabled = true;
+            this.DesignationComboBox.Location = new System.Drawing.Point(183, 270);
+            this.DesignationComboBox.Name = "DesignationComboBox";
+            this.DesignationComboBox.Size = new System.Drawing.Size(210, 21);
+            this.DesignationComboBox.TabIndex = 42;
+            this.DesignationComboBox.SelectedIndexChanged += new System.EventHandler(this.DesignationComboBox_SelectedIndexChanged);
             // 
-            // materialRaisedButton2
+            // advisorDesignation
             // 
-            this.materialRaisedButton2.AutoSize = true;
-            this.materialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Icon = null;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(421, 24);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(203, 36);
-            this.materialRaisedButton2.TabIndex = 0;
-            this.materialRaisedButton2.Text = "Manage Advisor Records";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.advisorDesignation.AutoSize = true;
+            this.advisorDesignation.Cursor = System.Windows.Forms.Cursors.SizeNESW;
+            this.advisorDesignation.Depth = 0;
+            this.advisorDesignation.Font = new System.Drawing.Font("Roboto", 11F);
+            this.advisorDesignation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.advisorDesignation.Location = new System.Drawing.Point(72, 269);
+            this.advisorDesignation.MouseState = MaterialSkin.MouseState.HOVER;
+            this.advisorDesignation.Name = "advisorDesignation";
+            this.advisorDesignation.Size = new System.Drawing.Size(89, 19);
+            this.advisorDesignation.TabIndex = 41;
+            this.advisorDesignation.Text = "Designation";
             // 
-            // materialRaisedButton3
+            // materialLabel15
             // 
-            this.materialRaisedButton3.AutoSize = true;
-            this.materialRaisedButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Icon = null;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(147, 116);
-            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton3.Name = "materialRaisedButton3";
-            this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(109, 36);
-            this.materialRaisedButton3.TabIndex = 1;
-            this.materialRaisedButton3.Text = "Add Advisor";
-            this.materialRaisedButton3.UseVisualStyleBackColor = true;
-            this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
+            this.materialLabel15.AutoSize = true;
+            this.materialLabel15.Depth = 0;
+            this.materialLabel15.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel15.Location = new System.Drawing.Point(72, 313);
+            this.materialLabel15.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel15.Name = "materialLabel15";
+            this.materialLabel15.Size = new System.Drawing.Size(50, 19);
+            this.materialLabel15.TabIndex = 40;
+            this.materialLabel15.Text = "Salary";
             // 
-            // materialRaisedButton4
+            // advisorSalary
             // 
-            this.materialRaisedButton4.AutoSize = true;
-            this.materialRaisedButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton4.Depth = 0;
-            this.materialRaisedButton4.Icon = null;
-            this.materialRaisedButton4.Location = new System.Drawing.Point(756, 98);
-            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton4.Name = "materialRaisedButton4";
-            this.materialRaisedButton4.Primary = true;
-            this.materialRaisedButton4.Size = new System.Drawing.Size(118, 36);
-            this.materialRaisedButton4.TabIndex = 2;
-            this.materialRaisedButton4.Text = "View Records";
-            this.materialRaisedButton4.UseVisualStyleBackColor = true;
+            this.advisorSalary.Depth = 0;
+            this.advisorSalary.Hint = "";
+            this.advisorSalary.Location = new System.Drawing.Point(174, 309);
+            this.advisorSalary.MaxLength = 32767;
+            this.advisorSalary.MouseState = MaterialSkin.MouseState.HOVER;
+            this.advisorSalary.Name = "advisorSalary";
+            this.advisorSalary.PasswordChar = '\0';
+            this.advisorSalary.SelectedText = "";
+            this.advisorSalary.SelectionLength = 0;
+            this.advisorSalary.SelectionStart = 0;
+            this.advisorSalary.Size = new System.Drawing.Size(201, 23);
+            this.advisorSalary.TabIndex = 39;
+            this.advisorSalary.TabStop = false;
+            this.advisorSalary.UseSystemPasswordChar = false;
             // 
             // advisorDataGridView2
             // 
@@ -697,58 +702,51 @@
             this.advisorFname.TabStop = false;
             this.advisorFname.UseSystemPasswordChar = false;
             // 
-            // advisorSalary
+            // materialRaisedButton4
             // 
-            this.advisorSalary.Depth = 0;
-            this.advisorSalary.Hint = "";
-            this.advisorSalary.Location = new System.Drawing.Point(174, 309);
-            this.advisorSalary.MaxLength = 32767;
-            this.advisorSalary.MouseState = MaterialSkin.MouseState.HOVER;
-            this.advisorSalary.Name = "advisorSalary";
-            this.advisorSalary.PasswordChar = '\0';
-            this.advisorSalary.SelectedText = "";
-            this.advisorSalary.SelectionLength = 0;
-            this.advisorSalary.SelectionStart = 0;
-            this.advisorSalary.Size = new System.Drawing.Size(201, 23);
-            this.advisorSalary.TabIndex = 39;
-            this.advisorSalary.TabStop = false;
-            this.advisorSalary.UseSystemPasswordChar = false;
+            this.materialRaisedButton4.AutoSize = true;
+            this.materialRaisedButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton4.Depth = 0;
+            this.materialRaisedButton4.Icon = null;
+            this.materialRaisedButton4.Location = new System.Drawing.Point(756, 98);
+            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton4.Name = "materialRaisedButton4";
+            this.materialRaisedButton4.Primary = true;
+            this.materialRaisedButton4.Size = new System.Drawing.Size(118, 36);
+            this.materialRaisedButton4.TabIndex = 2;
+            this.materialRaisedButton4.Text = "View Records";
+            this.materialRaisedButton4.UseVisualStyleBackColor = true;
             // 
-            // materialLabel15
+            // materialRaisedButton3
             // 
-            this.materialLabel15.AutoSize = true;
-            this.materialLabel15.Depth = 0;
-            this.materialLabel15.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel15.Location = new System.Drawing.Point(72, 313);
-            this.materialLabel15.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel15.Name = "materialLabel15";
-            this.materialLabel15.Size = new System.Drawing.Size(50, 19);
-            this.materialLabel15.TabIndex = 40;
-            this.materialLabel15.Text = "Salary";
+            this.materialRaisedButton3.AutoSize = true;
+            this.materialRaisedButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton3.Depth = 0;
+            this.materialRaisedButton3.Icon = null;
+            this.materialRaisedButton3.Location = new System.Drawing.Point(147, 116);
+            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton3.Name = "materialRaisedButton3";
+            this.materialRaisedButton3.Primary = true;
+            this.materialRaisedButton3.Size = new System.Drawing.Size(109, 36);
+            this.materialRaisedButton3.TabIndex = 1;
+            this.materialRaisedButton3.Text = "Add Advisor";
+            this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
             // 
-            // advisorDesignation
+            // materialRaisedButton2
             // 
-            this.advisorDesignation.AutoSize = true;
-            this.advisorDesignation.Cursor = System.Windows.Forms.Cursors.SizeNESW;
-            this.advisorDesignation.Depth = 0;
-            this.advisorDesignation.Font = new System.Drawing.Font("Roboto", 11F);
-            this.advisorDesignation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.advisorDesignation.Location = new System.Drawing.Point(72, 269);
-            this.advisorDesignation.MouseState = MaterialSkin.MouseState.HOVER;
-            this.advisorDesignation.Name = "advisorDesignation";
-            this.advisorDesignation.Size = new System.Drawing.Size(89, 19);
-            this.advisorDesignation.TabIndex = 41;
-            this.advisorDesignation.Text = "Designation";
-            // 
-            // DesignationComboBox
-            // 
-            this.DesignationComboBox.FormattingEnabled = true;
-            this.DesignationComboBox.Location = new System.Drawing.Point(183, 270);
-            this.DesignationComboBox.Name = "DesignationComboBox";
-            this.DesignationComboBox.Size = new System.Drawing.Size(210, 21);
-            this.DesignationComboBox.TabIndex = 42;
-            this.DesignationComboBox.SelectedIndexChanged += new System.EventHandler(this.DesignationComboBox_SelectedIndexChanged);
+            this.materialRaisedButton2.AutoSize = true;
+            this.materialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Icon = null;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(421, 24);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(203, 36);
+            this.materialRaisedButton2.TabIndex = 0;
+            this.materialRaisedButton2.Text = "Manage Advisor Records";
+            this.materialRaisedButton2.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
@@ -760,20 +758,6 @@
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Manage Projects";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // materialTabSelector2
-            // 
-            this.materialTabSelector2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialTabSelector2.BaseTabControl = this.materialTabControl2;
-            this.materialTabSelector2.Depth = 0;
-            this.materialTabSelector2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.materialTabSelector2.Location = new System.Drawing.Point(29, 17);
-            this.materialTabSelector2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialTabSelector2.Name = "materialTabSelector2";
-            this.materialTabSelector2.Size = new System.Drawing.Size(1118, 45);
-            this.materialTabSelector2.TabIndex = 0;
-            this.materialTabSelector2.Text = "materialTabSelector2";
             // 
             // materialTabControl2
             // 
@@ -790,13 +774,159 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.White;
+            this.tabPage2.Controls.Add(this.materialRaisedButton8);
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.materialFlatButton4);
+            this.tabPage2.Controls.Add(this.materialLabel17);
+            this.tabPage2.Controls.Add(this.richTextBox1);
+            this.tabPage2.Controls.Add(this.title);
+            this.tabPage2.Controls.Add(this.materialLabel16);
+            this.tabPage2.Controls.Add(this.materialRaisedButton7);
+            this.tabPage2.Controls.Add(this.materialLabel1);
+            this.tabPage2.Controls.Add(this.materialRaisedButton6);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1122, 504);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "Faculty Member";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // materialRaisedButton8
+            // 
+            this.materialRaisedButton8.AutoSize = true;
+            this.materialRaisedButton8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton8.Depth = 0;
+            this.materialRaisedButton8.Icon = null;
+            this.materialRaisedButton8.Location = new System.Drawing.Point(688, 127);
+            this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton8.Name = "materialRaisedButton8";
+            this.materialRaisedButton8.Primary = true;
+            this.materialRaisedButton8.Size = new System.Drawing.Size(125, 36);
+            this.materialRaisedButton8.TabIndex = 9;
+            this.materialRaisedButton8.Text = "View Projects";
+            this.materialRaisedButton8.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(481, 202);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(530, 216);
+            this.dataGridView2.TabIndex = 8;
+            // 
+            // materialFlatButton4
+            // 
+            this.materialFlatButton4.AutoSize = true;
+            this.materialFlatButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton4.Depth = 0;
+            this.materialFlatButton4.Icon = null;
+            this.materialFlatButton4.Location = new System.Drawing.Point(144, 382);
+            this.materialFlatButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton4.Name = "materialFlatButton4";
+            this.materialFlatButton4.Primary = false;
+            this.materialFlatButton4.Size = new System.Drawing.Size(71, 36);
+            this.materialFlatButton4.TabIndex = 7;
+            this.materialFlatButton4.Text = "Submit";
+            this.materialFlatButton4.UseVisualStyleBackColor = true;
+            this.materialFlatButton4.Click += new System.EventHandler(this.materialFlatButton4_Click);
+            // 
+            // materialLabel17
+            // 
+            this.materialLabel17.AutoSize = true;
+            this.materialLabel17.Depth = 0;
+            this.materialLabel17.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel17.Location = new System.Drawing.Point(42, 246);
+            this.materialLabel17.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel17.Name = "materialLabel17";
+            this.materialLabel17.Size = new System.Drawing.Size(86, 19);
+            this.materialLabel17.TabIndex = 6;
+            this.materialLabel17.Text = "Description";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(144, 246);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(208, 106);
+            this.richTextBox1.TabIndex = 5;
+            this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // title
+            // 
+            this.title.Depth = 0;
+            this.title.Hint = "";
+            this.title.Location = new System.Drawing.Point(144, 202);
+            this.title.MaxLength = 32767;
+            this.title.MouseState = MaterialSkin.MouseState.HOVER;
+            this.title.Name = "title";
+            this.title.PasswordChar = '\0';
+            this.title.SelectedText = "";
+            this.title.SelectionLength = 0;
+            this.title.SelectionStart = 0;
+            this.title.Size = new System.Drawing.Size(188, 23);
+            this.title.TabIndex = 4;
+            this.title.TabStop = false;
+            this.title.UseSystemPasswordChar = false;
+            this.title.Click += new System.EventHandler(this.title_Click);
+            // 
+            // materialLabel16
+            // 
+            this.materialLabel16.AutoSize = true;
+            this.materialLabel16.Depth = 0;
+            this.materialLabel16.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel16.Location = new System.Drawing.Point(63, 206);
+            this.materialLabel16.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel16.Name = "materialLabel16";
+            this.materialLabel16.Size = new System.Drawing.Size(39, 19);
+            this.materialLabel16.TabIndex = 3;
+            this.materialLabel16.Text = "Title";
+            // 
+            // materialRaisedButton7
+            // 
+            this.materialRaisedButton7.AutoSize = true;
+            this.materialRaisedButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton7.Depth = 0;
+            this.materialRaisedButton7.Icon = null;
+            this.materialRaisedButton7.Location = new System.Drawing.Point(144, 127);
+            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton7.Name = "materialRaisedButton7";
+            this.materialRaisedButton7.Primary = true;
+            this.materialRaisedButton7.Size = new System.Drawing.Size(111, 36);
+            this.materialRaisedButton7.TabIndex = 2;
+            this.materialRaisedButton7.Text = "Add Project";
+            this.materialRaisedButton7.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(87, 178);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(0, 19);
+            this.materialLabel1.TabIndex = 1;
+            // 
+            // materialRaisedButton6
+            // 
+            this.materialRaisedButton6.AutoSize = true;
+            this.materialRaisedButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton6.Depth = 0;
+            this.materialRaisedButton6.Icon = null;
+            this.materialRaisedButton6.Location = new System.Drawing.Point(465, 52);
+            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton6.Name = "materialRaisedButton6";
+            this.materialRaisedButton6.Primary = true;
+            this.materialRaisedButton6.Size = new System.Drawing.Size(233, 36);
+            this.materialRaisedButton6.TabIndex = 0;
+            this.materialRaisedButton6.Text = "Add Project Faculty Member";
+            this.materialRaisedButton6.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
@@ -807,6 +937,34 @@
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "Faculty Advisor";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // materialTabSelector2
+            // 
+            this.materialTabSelector2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialTabSelector2.BaseTabControl = this.materialTabControl2;
+            this.materialTabSelector2.Depth = 0;
+            this.materialTabSelector2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.materialTabSelector2.Location = new System.Drawing.Point(29, 17);
+            this.materialTabSelector2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialTabSelector2.Name = "materialTabSelector2";
+            this.materialTabSelector2.Size = new System.Drawing.Size(1118, 45);
+            this.materialTabSelector2.TabIndex = 0;
+            this.materialTabSelector2.Text = "materialTabSelector2";
+            // 
+            // materialTabSelector1
+            // 
+            this.materialTabSelector1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialTabSelector1.BaseTabControl = this.materialTabControl1;
+            this.materialTabSelector1.Depth = 0;
+            this.materialTabSelector1.Location = new System.Drawing.Point(-1, 64);
+            this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialTabSelector1.Name = "materialTabSelector1";
+            this.materialTabSelector1.Size = new System.Drawing.Size(1438, 36);
+            this.materialTabSelector1.TabIndex = 1;
+            this.materialTabSelector1.Text = "materialTabSelector1";
+            this.materialTabSelector1.Click += new System.EventHandler(this.materialTabSelector1_Click);
             // 
             // Form1
             // 
@@ -827,6 +985,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.advisorDataGridView2)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.materialTabControl2.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -883,6 +1044,16 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector2;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
+        private MaterialSkin.Controls.MaterialLabel materialLabel16;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton7;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField title;
+        private MaterialSkin.Controls.MaterialLabel materialLabel17;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton8;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 

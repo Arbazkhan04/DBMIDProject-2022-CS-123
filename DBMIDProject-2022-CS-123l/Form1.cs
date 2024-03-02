@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using DBMIDProject_2022_CS_123l.BL;
 using DBMIDProject_2022_CS_123l.DL;
 using MaterialSkin;
@@ -282,6 +283,43 @@ namespace DBMIDProject_2022_CS_123l
 
         private void materialTabControl2_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void title_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialFlatButton4_Click(object sender, EventArgs e)
+        {
+            string t = title.Text;
+            string description = richTextBox1.Text;
+           
+            if (string.IsNullOrEmpty(description) || string.IsNullOrEmpty(t))
+            {
+                MessageBox.Show("Please fill all the fields");
+            }
+            else
+            {
+                Project  project = new Project(t, description);
+                ProjectDl.addProject(project);
+                //get id of project
+                //create an object projectStatus and add it to the database 
+                int projectId = ProjectDl.nextProjectId();
+                ProjectDl.addProjectStatus(0, projectId);
+
+            }
 
         }
     }

@@ -76,7 +76,7 @@
             this.materialTabControl2 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.projectDataGridView = new System.Windows.Forms.DataGridView();
             this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -88,6 +88,10 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
+            this.fADataGridView = new System.Windows.Forms.DataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.showProjectDataGridView = new System.Windows.Forms.DataGridView();
+            this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialTabControl1.SuspendLayout();
             this.studentPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -96,7 +100,11 @@
             this.tabPage1.SuspendLayout();
             this.materialTabControl2.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectDataGridView)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fADataGridView)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showProjectDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -104,6 +112,7 @@
             this.materialTabControl1.Controls.Add(this.studentPage);
             this.materialTabControl1.Controls.Add(this.advisorPage);
             this.materialTabControl1.Controls.Add(this.tabPage1);
+            this.materialTabControl1.Controls.Add(this.tabPage4);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Location = new System.Drawing.Point(12, 124);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -519,7 +528,7 @@
             // advisorDataGridView2
             // 
             this.advisorDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.advisorDataGridView2.Location = new System.Drawing.Point(421, 182);
+            this.advisorDataGridView2.Location = new System.Drawing.Point(421, 201);
             this.advisorDataGridView2.Name = "advisorDataGridView2";
             this.advisorDataGridView2.Size = new System.Drawing.Size(761, 309);
             this.advisorDataGridView2.TabIndex = 38;
@@ -776,7 +785,7 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.materialRaisedButton8);
-            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.projectDataGridView);
             this.tabPage2.Controls.Add(this.materialFlatButton4);
             this.tabPage2.Controls.Add(this.materialLabel17);
             this.tabPage2.Controls.Add(this.richTextBox1);
@@ -808,13 +817,13 @@
             this.materialRaisedButton8.Text = "View Projects";
             this.materialRaisedButton8.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // projectDataGridView
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(481, 202);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(530, 216);
-            this.dataGridView2.TabIndex = 8;
+            this.projectDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.projectDataGridView.Location = new System.Drawing.Point(481, 202);
+            this.projectDataGridView.Name = "projectDataGridView";
+            this.projectDataGridView.Size = new System.Drawing.Size(530, 216);
+            this.projectDataGridView.TabIndex = 8;
             // 
             // materialFlatButton4
             // 
@@ -930,6 +939,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.fADataGridView);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -966,6 +976,51 @@
             this.materialTabSelector1.Text = "materialTabSelector1";
             this.materialTabSelector1.Click += new System.EventHandler(this.materialTabSelector1_Click);
             // 
+            // fADataGridView
+            // 
+            this.fADataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.fADataGridView.Location = new System.Drawing.Point(200, 64);
+            this.fADataGridView.Name = "fADataGridView";
+            this.fADataGridView.Size = new System.Drawing.Size(726, 352);
+            this.fADataGridView.TabIndex = 0;
+            this.fADataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.materialRaisedButton9);
+            this.tabPage4.Controls.Add(this.showProjectDataGridView);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1266, 610);
+            this.tabPage4.TabIndex = 4;
+            this.tabPage4.Text = "Formation Of Group";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // showProjectDataGridView
+            // 
+            this.showProjectDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.showProjectDataGridView.Location = new System.Drawing.Point(331, 163);
+            this.showProjectDataGridView.Name = "showProjectDataGridView";
+            this.showProjectDataGridView.Size = new System.Drawing.Size(557, 338);
+            this.showProjectDataGridView.TabIndex = 0;
+            this.showProjectDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick_1);
+            // 
+            // materialRaisedButton9
+            // 
+            this.materialRaisedButton9.AutoSize = true;
+            this.materialRaisedButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton9.Depth = 0;
+            this.materialRaisedButton9.Icon = null;
+            this.materialRaisedButton9.Location = new System.Drawing.Point(476, 81);
+            this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton9.Name = "materialRaisedButton9";
+            this.materialRaisedButton9.Primary = true;
+            this.materialRaisedButton9.Size = new System.Drawing.Size(215, 36);
+            this.materialRaisedButton9.TabIndex = 1;
+            this.materialRaisedButton9.Text = "List of Available Projects";
+            this.materialRaisedButton9.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -987,7 +1042,12 @@
             this.materialTabControl2.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectDataGridView)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.fADataGridView)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showProjectDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1053,7 +1113,11 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton8;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView projectDataGridView;
+        private System.Windows.Forms.DataGridView fADataGridView;
+        private System.Windows.Forms.TabPage tabPage4;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton9;
+        private System.Windows.Forms.DataGridView showProjectDataGridView;
     }
 }
 

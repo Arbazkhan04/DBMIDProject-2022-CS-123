@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,17 +22,30 @@ namespace DBMIDProject_2022_CS_123l
         //query for showing in data grid view student
         string queryShowStudet = "select * from Person inner join Student on Person.Id = Student.Id";
         string queryShowAdvisor = "select * from person inner join Advisor on Person.Id = Advisor.Id";
+        string queryShowProject = "select * from project inner join projectstatus on project.Id = projectstatus.project_Id";
+        string queryShowFacultyAdvisor = "select Project.Id,Project.Title,Project.Description,projectStatus.isApproved from Project inner join projectStatus on Project.Id = projectStatus.Id";
+        string queryToShowAllAcceptedProject = "select Project.Id,Project.Title,Project.Description from Project inner join projectStatus on Project.Id = projectStatus.Id where projectStatus.isApproved = 1";
         public Form1()
         {
             InitializeComponent();
             //for student
             populateValueIntoComboxBox();
             showData(dataGridView1, queryShowStudet);
-         
+
             //for advisor
             populateIntoAdvisorComboBox();
             showData(advisorDataGridView2, queryShowAdvisor);
             populateIntoAdvisorDesigantionComboBox();
+
+            //for project
+            showData(projectDataGridView, queryShowProject);
+
+            //faculty advisor
+            showFultyAdvisor(fADataGridView, queryShowFacultyAdvisor);
+
+            //show all accepted project
+            showListOfAvailableProject(showProjectDataGridView, queryToShowAllAcceptedProject);
+
             // Create a material theme manager and add the form to manage (this)
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -132,7 +146,7 @@ namespace DBMIDProject_2022_CS_123l
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-             
+
             string fName = fname.Text;
             string lName = lname.Text;
             string contact = contctf.Text;
@@ -190,14 +204,22 @@ namespace DBMIDProject_2022_CS_123l
 
         }
 
-        public static void showData(DataGridView dataGridView,string query)
+        public static void showData(DataGridView dataGridView, string query)
         {
-                var con = Configuration.getInstance().getConnection();
-                SqlCommand cmd = new SqlCommand(query, con);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dataGridView.DataSource = dt;
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView.DataSource = dt;
+
+            // Adjust column width and enable text wrapping for all columns
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
+            foreach (DataGridViewColumn column in dataGridView.Columns)
+            {
+                column.MinimumWidth = 100; // Adjust the minimum width as needed
+                column.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            }
         }
 
         private void materialRaisedButton3_Click(object sender, EventArgs e)
@@ -219,7 +241,7 @@ namespace DBMIDProject_2022_CS_123l
             DateTime dateOfBirth = advisorDateTimePicker.Value;
             string gender = advisorComboBox.Text;
             string designation = DesignationComboBox.Text;
-            int designationCode =  GetDesignationCode(designation);
+            int designationCode = GetDesignationCode(designation);
             decimal salary = decimal.Parse(advisorSalary.Text);
             int genderNo = (gender == "Male") ? 1 : 2;
             MessageBox.Show(salary.ToString());
@@ -305,22 +327,141 @@ namespace DBMIDProject_2022_CS_123l
         {
             string t = title.Text;
             string description = richTextBox1.Text;
-           
+
             if (string.IsNullOrEmpty(description) || string.IsNullOrEmpty(t))
             {
                 MessageBox.Show("Please fill all the fields");
             }
             else
             {
-                Project  project = new Project(t, description);
+
+                Project project = new Project(t, description);
                 ProjectDl.addProject(project);
                 //get id of project
                 //create an object projectStatus and add it to the database 
                 int projectId = ProjectDl.nextProjectId();
                 ProjectDl.addProjectStatus(0, projectId);
-
+                MessageBox.Show("Your project idea is submitted successfully");
             }
 
+            //reset the form 
+            title.Text = "";
+            richTextBox1.Text = "";
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        public static void showFultyAdvisor(DataGridView dataGridView, string query)
+        {
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            // Set the DataSource first
+            dataGridView.DataSource = dt;
+
+            // Adjust column width and enable text wrapping for all columns
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
+            foreach (DataGridViewColumn column in dataGridView.Columns)
+            {
+                column.MinimumWidth = 100; // Adjust the minimum width as needed
+                column.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            }
+
+            // Add Accept button
+            DataGridViewButtonColumn acceptButton = new DataGridViewButtonColumn();
+            acceptButton.HeaderText = "Accept";
+            acceptButton.Text = "Accept";
+            acceptButton.UseColumnTextForButtonValue = true;
+            dataGridView.Columns.Add(acceptButton);
+
+            // Add Reject button
+            DataGridViewButtonColumn rejectButton = new DataGridViewButtonColumn();
+            rejectButton.HeaderText = "Reject";
+            rejectButton.Text = "Reject";
+            rejectButton.UseColumnTextForButtonValue = true;
+            dataGridView.Columns.Add(rejectButton);
+
+            // Handle button click event
+            dataGridView.CellContentClick += (sender, e) =>
+            {
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+                {
+                    int id = Convert.ToInt32(dataGridView.Rows[e.RowIndex].Cells["Id"].Value);
+                    string buttonClicked = dataGridView.Columns[e.ColumnIndex].HeaderText;
+
+                    if (buttonClicked == "Accept")
+                    {
+                        // Handle Accept button click
+                        // You can perform actions for accepting here
+                        ProjectDl.updateProject(id);
+                        MessageBox.Show("Accepted ID: " + id);
+                    }
+                    else if (buttonClicked == "Reject")
+                    {
+                        // Handle Reject button click
+                        // You can perform actions for rejecting here
+                        ProjectDl.deleteProject(id);
+                        MessageBox.Show("Rejected ID: " + id);
+                    }
+                }
+            };
+        }
+
+        private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        public  void showListOfAvailableProject(DataGridView dataGridView,string query)
+        {
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            // Set the DataSource first
+            dataGridView.DataSource = dt;
+
+            // Adjust column width and enable text wrapping for all columns
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
+            foreach (DataGridViewColumn column in dataGridView.Columns)
+            {
+                column.MinimumWidth = 100; // Adjust the minimum width as needed
+                column.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            }
+
+            // Add Accept button
+            DataGridViewButtonColumn acceptButton = new DataGridViewButtonColumn();
+            acceptButton.HeaderText = "Create Group";
+            acceptButton.Text = "Create Group";
+            acceptButton.UseColumnTextForButtonValue = true;
+            dataGridView.Columns.Add(acceptButton);
+
+            // Handle button click event
+            dataGridView.CellContentClick += (sender, e) =>
+            {
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+                {
+                    int id = Convert.ToInt32(dataGridView.Rows[e.RowIndex].Cells["Id"].Value);
+                    string buttonClicked = dataGridView.Columns[e.ColumnIndex].HeaderText;
+
+                    if(buttonClicked == "Create Group")
+                    {
+                        // Handle Create Group button click
+                        // You can perform actions for creating group here
+                        MessageBox.Show("Create Group for ID: " + id);
+                        Form group = new Group(id);
+                         this.Opacity = 0;
+                        group.Show();
+                    }
+                }
+            };
         }
     }
 }

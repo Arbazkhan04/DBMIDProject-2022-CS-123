@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DBMIDProject_2022_CS_123l.BL;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace DBMIDProject_2022_CS_123l.DL
 {
@@ -35,5 +36,30 @@ namespace DBMIDProject_2022_CS_123l.DL
             cmd.Parameters.AddWithValue("@project_Id", projectId);
             cmd.ExecuteNonQuery();
         }   
+
+        // delete the project from the database first romove the freign key contraint form projecr status then delete the project
+        public static void deleteProject(int id)
+        {
+            var con = Configuration.getInstance().getConnection();
+            // First, delete related records from projectStatus
+            SqlCommand cmdDeleteStatus = new SqlCommand("DELETE FROM projectStatus WHERE Project_Id = @Id", con);
+            cmdDeleteStatus.Parameters.AddWithValue("@Id", id);
+            cmdDeleteStatus.ExecuteNonQuery();
+
+            // Then, delete the project itself
+            SqlCommand cmdDeleteProject = new SqlCommand("DELETE FROM Project WHERE Id = @Id", con);
+            cmdDeleteProject.Parameters.AddWithValue("@Id", id);
+            cmdDeleteProject.ExecuteNonQuery();
+        }
+
+        //update the project in project staus just change the staut from 0 to 1
+        public static void updateProject(int id)
+        {
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("UPDATE projectStatus SET isApproved = @isApproved WHERE project_Id = @Id", con);
+            cmd.Parameters.AddWithValue("@isApproved", 1);
+            cmd.Parameters.AddWithValue("@Id", id); 
+            cmd.ExecuteNonQuery();
+        }
     }
 }

@@ -25,6 +25,7 @@ namespace DBMIDProject_2022_CS_123l
         string queryShowProject = "select * from project inner join projectstatus on project.Id = projectstatus.project_Id";
         string queryShowFacultyAdvisor = "select Project.Id,Project.Title,Project.Description,projectStatus.isApproved from Project inner join projectStatus on Project.Id = projectStatus.Id";
         string queryToShowAllAcceptedProject = "select Project.Id,Project.Title,Project.Description from Project inner join projectStatus on Project.Id = projectStatus.Id where projectStatus.isApproved = 1";
+        private string connectionString = @"Data Source=(local);Initial Catalog=ProjectA;Integrated Security=True";
         public Form1()
         {
             InitializeComponent();
@@ -46,6 +47,8 @@ namespace DBMIDProject_2022_CS_123l
             //show all accepted project
             showListOfAvailableProject(showProjectDataGridView, queryToShowAllAcceptedProject);
 
+            //select advisor for the project 
+            selectBoardAdvisorForProject();
             // Create a material theme manager and add the form to manage (this)
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -417,7 +420,7 @@ namespace DBMIDProject_2022_CS_123l
 
         }
 
-        public  void showListOfAvailableProject(DataGridView dataGridView,string query)
+        public void showListOfAvailableProject(DataGridView dataGridView, string query)
         {
             var con = Configuration.getInstance().getConnection();
             SqlCommand cmd = new SqlCommand(query, con);
@@ -451,17 +454,27 @@ namespace DBMIDProject_2022_CS_123l
                     int id = Convert.ToInt32(dataGridView.Rows[e.RowIndex].Cells["Id"].Value);
                     string buttonClicked = dataGridView.Columns[e.ColumnIndex].HeaderText;
 
-                    if(buttonClicked == "Create Group")
+                    if (buttonClicked == "Create Group")
                     {
                         // Handle Create Group button click
                         // You can perform actions for creating group here
                         MessageBox.Show("Create Group for ID: " + id);
                         Form group = new Group(id);
-                         this.Opacity = 0;
+                        this.Opacity = 0;
                         group.Show();
                     }
                 }
             };
         }
-    }
+
+        private void dataGridView2_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        public void selectBoardAdvisorForProject()
+        {
+
+        }
+    } 
 }

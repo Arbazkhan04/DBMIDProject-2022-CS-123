@@ -27,8 +27,8 @@ namespace DBMIDProject_2022_CS_123l
         string queryShowStudet = "select Student.Id,Person.FirstName, Person.Contact,Person.Gender, Student.RegistrationNo from Person inner join Student on Person.Id = Student.Id";
         string queryShowAdvisor = "select Advisor.Id,Advisor.Designation, Person.FirstName, Person.Contact,Person.Gender from person inner join Advisor on Person.Id = Advisor.Id";
         string queryShowProject = "select * from project inner join projectstatus on project.Id = projectstatus.project_Id";
-        string queryShowFacultyAdvisor = "select Project.Id,Project.Title,Project.Description,projectStatus.isApproved from Project inner join projectStatus on Project.Id = projectStatus.Id";
-        string queryToShowAllAcceptedProject = "select Project.Id,Project.Title,Project.Description from Project inner join projectStatus on Project.Id = projectStatus.Id where projectStatus.isApproved = 1";
+        string queryShowFacultyAdvisor = "select Project.Id,Project.Title,Project.Description,projectStatus.isApproved from Project inner join projectStatus on Project.Id = projectStatus.Project_Id";
+        string queryToShowAllAcceptedProject = "select Project.Id,Project.Title,Project.Description from Project inner join projectStatus on Project.Id = projectStatus.project_Id where projectStatus.isApproved = 1";
         string connectionString = @"Data Source=(local);Initial Catalog=ProjectA;Integrated Security=True";
         String showAdvisorName = "SELECT FirstName FROM Advisor INNER JOIN Person ON Advisor.Id = Person.Id LEFT JOIN ProjectAdvisor ON Advisor.Id = ProjectAdvisor.AdvisorId WHERE ProjectAdvisor.AdvisorId IS NULL";
         public Form1()
@@ -668,10 +668,7 @@ namespace DBMIDProject_2022_CS_123l
                 string mainAdvisor = mainComboBox.SelectedItem == null ? "" : mainComboBox.SelectedItem.ToString();
                 string coAdvisor = coAdvisorComboBox.SelectedItem == null ? "" : coAdvisorComboBox.SelectedItem.ToString();
                 string industrialAdvisor = industrialComboBox.SelectedItem == null ? "" : industrialComboBox.SelectedItem.ToString();
-                MessageBox.Show(mainAdvisor);
-                MessageBox.Show(coAdvisor);
-                MessageBox.Show(industrialAdvisor);
-                MessageBox.Show(projectId.ToString());
+                
                 //create object for main advisor 
 
                 if (mainAdvisor != "")
@@ -768,6 +765,146 @@ namespace DBMIDProject_2022_CS_123l
         private void materialRaisedButton4_Click(object sender, EventArgs e)
         {
             showDataForAdvisor(advisorDataGridView2, queryShowAdvisor);
+        }
+
+        private void materialRaisedButton16_Click(object sender, EventArgs e)
+        {
+            Report1Formcs report = new Report1Formcs();
+            report.Show();
+        }
+
+        private void tabPage7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialRaisedButton18_Click(object sender, EventArgs e)
+        {
+            string name = eName.Text;
+            int marks = int.Parse(eMarks.Text);
+            int weightage = int.Parse(eWeightage.Text);
+
+
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(eMarks.Text) || string.IsNullOrEmpty(eWeightage.Text))
+            {
+                MessageBox.Show("Please fill all the fields");
+            }
+            else
+            {
+                 EvalutionDl.addEvalution(name, marks, weightage);
+                MessageBox.Show("else exe3");
+            }
+
+            //reset the form 
+            eName.Text = "";
+            eMarks.Text = "";
+            eWeightage.Text = "";
+        }
+
+        private void materialLabel21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GComboBox_Click(object sender, EventArgs e)
+        {
+            var con = Configuration.getInstance().getConnection();
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = new SqlCommand("Select Id From [Group]", con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            List<object> dataList = new List<object>();
+            while (reader.Read())
+            {
+                object data = reader["Id"];
+                dataList.Add(data);
+            }
+            reader.Close();
+
+            GComboBox.DataSource = dataList;
+        }
+
+        private void GComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GEvaluation_Click(object sender, EventArgs e)
+        {
+            var con = Configuration.getInstance().getConnection();
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = new SqlCommand("Select Id From [Evaluation]", con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            List<object> dataList = new List<object>();
+            while (reader.Read())
+            {
+                object data = reader["Id"];
+                dataList.Add(data);
+            }
+            reader.Close();
+
+            GComboBox.DataSource = dataList;
+        }
+
+        private void materialRaisedButton20_Click(object sender, EventArgs e)
+        {
+            int groupId = int.Parse(GComboBox.Text);
+            int eId = int.Parse(GEvaluation.Text);
+            int marks = int.Parse(GOtainedMarks.Text);
+            DateTime date = DateTime.Parse(GDateTimePicker.Text);
+            // show in messbafe
+            MessageBox.Show(groupId.ToString());
+            MessageBox.Show(eId.ToString());
+            MessageBox.Show(marks.ToString());
+            MessageBox.Show(date.ToString());
+
+            EvalutionDl.addGroupEvalution(groupId, eId, marks, date);
+            //reset the form 
+            GComboBox.Text = "";
+            GEvaluation.Text = "";
+            GOtainedMarks.Text = "";
+        }
+
+        private void materialRaisedButton21_Click(object sender, EventArgs e)
+        {
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("select * from groupEvaluation", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            // Set the DataSource first
+            dataGridView3.DataSource = dt;
+        }
+
+        private void materialRaisedButton22_Click(object sender, EventArgs e)
+        {
+            MarkSheetReportForm report = new MarkSheetReportForm();
+            report.Show();
+        }
+
+        private void materialRaisedButton23_Click(object sender, EventArgs e)
+        {
+            Report3 report = new Report3();
+            report.Show();
+        }
+
+        private void materialRaisedButton24_Click(object sender, EventArgs e)
+        {
+
+            Report4 report = new Report4();
+            report.Show();
+        }
+
+        private void materialRaisedButton25_Click(object sender, EventArgs e)
+        {
+            Report5 report = new Report5();
+            report.Show();
         }
     }
 }

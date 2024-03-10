@@ -103,7 +103,35 @@
             this.mainComboBox = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.materialRaisedButton10 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.materialRaisedButton16 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.materialRaisedButton18 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.eWeightage = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel20 = new MaterialSkin.Controls.MaterialLabel();
+            this.eMarks = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel19 = new MaterialSkin.Controls.MaterialLabel();
+            this.eName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel18 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialRaisedButton17 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.materialRaisedButton21 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.materialRaisedButton20 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialLabel24 = new MaterialSkin.Controls.MaterialLabel();
+            this.GEvaluation = new System.Windows.Forms.ComboBox();
+            this.materialLabel23 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel22 = new MaterialSkin.Controls.MaterialLabel();
+            this.GDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.GComboBox = new System.Windows.Forms.ComboBox();
+            this.GOtainedMarks = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel21 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialRaisedButton19 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
+            this.materialRaisedButton22 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton23 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton24 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton25 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialTabControl1.SuspendLayout();
             this.studentPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -120,6 +148,10 @@
             this.tabPage5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -129,6 +161,9 @@
             this.materialTabControl1.Controls.Add(this.tabPage1);
             this.materialTabControl1.Controls.Add(this.tabPage4);
             this.materialTabControl1.Controls.Add(this.tabPage5);
+            this.materialTabControl1.Controls.Add(this.tabPage6);
+            this.materialTabControl1.Controls.Add(this.tabPage7);
+            this.materialTabControl1.Controls.Add(this.tabPage8);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Location = new System.Drawing.Point(12, 124);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1186,6 +1221,351 @@
             this.materialRaisedButton10.Text = "Select Project";
             this.materialRaisedButton10.UseVisualStyleBackColor = true;
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.materialRaisedButton25);
+            this.tabPage6.Controls.Add(this.materialRaisedButton24);
+            this.tabPage6.Controls.Add(this.materialRaisedButton23);
+            this.tabPage6.Controls.Add(this.materialRaisedButton22);
+            this.tabPage6.Controls.Add(this.materialRaisedButton16);
+            this.tabPage6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1266, 610);
+            this.tabPage6.TabIndex = 6;
+            this.tabPage6.Text = "Reports";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // materialRaisedButton16
+            // 
+            this.materialRaisedButton16.AutoSize = true;
+            this.materialRaisedButton16.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton16.Depth = 0;
+            this.materialRaisedButton16.Icon = null;
+            this.materialRaisedButton16.Location = new System.Drawing.Point(390, 85);
+            this.materialRaisedButton16.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton16.Name = "materialRaisedButton16";
+            this.materialRaisedButton16.Primary = true;
+            this.materialRaisedButton16.Size = new System.Drawing.Size(84, 36);
+            this.materialRaisedButton16.TabIndex = 0;
+            this.materialRaisedButton16.Text = "Report 1";
+            this.materialRaisedButton16.UseVisualStyleBackColor = true;
+            this.materialRaisedButton16.Click += new System.EventHandler(this.materialRaisedButton16_Click);
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.Color.White;
+            this.tabPage7.Controls.Add(this.materialRaisedButton18);
+            this.tabPage7.Controls.Add(this.eWeightage);
+            this.tabPage7.Controls.Add(this.materialLabel20);
+            this.tabPage7.Controls.Add(this.eMarks);
+            this.tabPage7.Controls.Add(this.materialLabel19);
+            this.tabPage7.Controls.Add(this.eName);
+            this.tabPage7.Controls.Add(this.materialLabel18);
+            this.tabPage7.Controls.Add(this.materialRaisedButton17);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(1266, 610);
+            this.tabPage7.TabIndex = 7;
+            this.tabPage7.Text = "Manage Evaulation";
+            this.tabPage7.Click += new System.EventHandler(this.tabPage7_Click);
+            // 
+            // materialRaisedButton18
+            // 
+            this.materialRaisedButton18.AutoSize = true;
+            this.materialRaisedButton18.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton18.Depth = 0;
+            this.materialRaisedButton18.Icon = null;
+            this.materialRaisedButton18.Location = new System.Drawing.Point(428, 450);
+            this.materialRaisedButton18.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton18.Name = "materialRaisedButton18";
+            this.materialRaisedButton18.Primary = true;
+            this.materialRaisedButton18.Size = new System.Drawing.Size(71, 36);
+            this.materialRaisedButton18.TabIndex = 7;
+            this.materialRaisedButton18.Text = "Submit";
+            this.materialRaisedButton18.UseVisualStyleBackColor = true;
+            this.materialRaisedButton18.Click += new System.EventHandler(this.materialRaisedButton18_Click);
+            // 
+            // eWeightage
+            // 
+            this.eWeightage.Depth = 0;
+            this.eWeightage.Hint = "";
+            this.eWeightage.Location = new System.Drawing.Point(428, 347);
+            this.eWeightage.MaxLength = 32767;
+            this.eWeightage.MouseState = MaterialSkin.MouseState.HOVER;
+            this.eWeightage.Name = "eWeightage";
+            this.eWeightage.PasswordChar = '\0';
+            this.eWeightage.SelectedText = "";
+            this.eWeightage.SelectionLength = 0;
+            this.eWeightage.SelectionStart = 0;
+            this.eWeightage.Size = new System.Drawing.Size(284, 23);
+            this.eWeightage.TabIndex = 6;
+            this.eWeightage.TabStop = false;
+            this.eWeightage.UseSystemPasswordChar = false;
+            // 
+            // materialLabel20
+            // 
+            this.materialLabel20.AutoSize = true;
+            this.materialLabel20.Depth = 0;
+            this.materialLabel20.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel20.Location = new System.Drawing.Point(265, 347);
+            this.materialLabel20.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel20.Name = "materialLabel20";
+            this.materialLabel20.Size = new System.Drawing.Size(79, 19);
+            this.materialLabel20.TabIndex = 5;
+            this.materialLabel20.Text = "Weightage";
+            // 
+            // eMarks
+            // 
+            this.eMarks.Depth = 0;
+            this.eMarks.Hint = "";
+            this.eMarks.Location = new System.Drawing.Point(428, 278);
+            this.eMarks.MaxLength = 32767;
+            this.eMarks.MouseState = MaterialSkin.MouseState.HOVER;
+            this.eMarks.Name = "eMarks";
+            this.eMarks.PasswordChar = '\0';
+            this.eMarks.SelectedText = "";
+            this.eMarks.SelectionLength = 0;
+            this.eMarks.SelectionStart = 0;
+            this.eMarks.Size = new System.Drawing.Size(284, 23);
+            this.eMarks.TabIndex = 4;
+            this.eMarks.TabStop = false;
+            this.eMarks.UseSystemPasswordChar = false;
+            // 
+            // materialLabel19
+            // 
+            this.materialLabel19.AutoSize = true;
+            this.materialLabel19.Depth = 0;
+            this.materialLabel19.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel19.Location = new System.Drawing.Point(265, 278);
+            this.materialLabel19.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel19.Name = "materialLabel19";
+            this.materialLabel19.Size = new System.Drawing.Size(51, 19);
+            this.materialLabel19.TabIndex = 3;
+            this.materialLabel19.Text = "Marks";
+            // 
+            // eName
+            // 
+            this.eName.Depth = 0;
+            this.eName.Hint = "";
+            this.eName.Location = new System.Drawing.Point(428, 203);
+            this.eName.MaxLength = 32767;
+            this.eName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.eName.Name = "eName";
+            this.eName.PasswordChar = '\0';
+            this.eName.SelectedText = "";
+            this.eName.SelectionLength = 0;
+            this.eName.SelectionStart = 0;
+            this.eName.Size = new System.Drawing.Size(284, 23);
+            this.eName.TabIndex = 2;
+            this.eName.TabStop = false;
+            this.eName.UseSystemPasswordChar = false;
+            // 
+            // materialLabel18
+            // 
+            this.materialLabel18.AutoSize = true;
+            this.materialLabel18.Depth = 0;
+            this.materialLabel18.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel18.Location = new System.Drawing.Point(265, 207);
+            this.materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel18.Name = "materialLabel18";
+            this.materialLabel18.Size = new System.Drawing.Size(49, 19);
+            this.materialLabel18.TabIndex = 1;
+            this.materialLabel18.Text = "Name";
+            // 
+            // materialRaisedButton17
+            // 
+            this.materialRaisedButton17.AutoSize = true;
+            this.materialRaisedButton17.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton17.Depth = 0;
+            this.materialRaisedButton17.Icon = null;
+            this.materialRaisedButton17.Location = new System.Drawing.Point(428, 51);
+            this.materialRaisedButton17.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton17.Name = "materialRaisedButton17";
+            this.materialRaisedButton17.Primary = true;
+            this.materialRaisedButton17.Size = new System.Drawing.Size(160, 36);
+            this.materialRaisedButton17.TabIndex = 0;
+            this.materialRaisedButton17.Text = "Evalution Control";
+            this.materialRaisedButton17.UseVisualStyleBackColor = true;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.BackColor = System.Drawing.Color.White;
+            this.tabPage8.Controls.Add(this.materialRaisedButton21);
+            this.tabPage8.Controls.Add(this.dataGridView3);
+            this.tabPage8.Controls.Add(this.materialRaisedButton20);
+            this.tabPage8.Controls.Add(this.materialLabel24);
+            this.tabPage8.Controls.Add(this.GEvaluation);
+            this.tabPage8.Controls.Add(this.materialLabel23);
+            this.tabPage8.Controls.Add(this.materialLabel22);
+            this.tabPage8.Controls.Add(this.GDateTimePicker);
+            this.tabPage8.Controls.Add(this.GComboBox);
+            this.tabPage8.Controls.Add(this.GOtainedMarks);
+            this.tabPage8.Controls.Add(this.materialLabel21);
+            this.tabPage8.Controls.Add(this.materialRaisedButton19);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(1266, 610);
+            this.tabPage8.TabIndex = 8;
+            this.tabPage8.Text = "Group Evaluation";
+            // 
+            // materialRaisedButton21
+            // 
+            this.materialRaisedButton21.AutoSize = true;
+            this.materialRaisedButton21.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton21.Depth = 0;
+            this.materialRaisedButton21.Icon = null;
+            this.materialRaisedButton21.Location = new System.Drawing.Point(787, 87);
+            this.materialRaisedButton21.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton21.Name = "materialRaisedButton21";
+            this.materialRaisedButton21.Primary = true;
+            this.materialRaisedButton21.Size = new System.Drawing.Size(187, 36);
+            this.materialRaisedButton21.TabIndex = 11;
+            this.materialRaisedButton21.Text = "View Group Evalutions";
+            this.materialRaisedButton21.UseVisualStyleBackColor = true;
+            this.materialRaisedButton21.Click += new System.EventHandler(this.materialRaisedButton21_Click);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(604, 159);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(541, 226);
+            this.dataGridView3.TabIndex = 10;
+            // 
+            // materialRaisedButton20
+            // 
+            this.materialRaisedButton20.AutoSize = true;
+            this.materialRaisedButton20.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton20.Depth = 0;
+            this.materialRaisedButton20.Icon = null;
+            this.materialRaisedButton20.Location = new System.Drawing.Point(266, 411);
+            this.materialRaisedButton20.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton20.Name = "materialRaisedButton20";
+            this.materialRaisedButton20.Primary = true;
+            this.materialRaisedButton20.Size = new System.Drawing.Size(71, 36);
+            this.materialRaisedButton20.TabIndex = 9;
+            this.materialRaisedButton20.Text = "Submit";
+            this.materialRaisedButton20.UseVisualStyleBackColor = true;
+            this.materialRaisedButton20.Click += new System.EventHandler(this.materialRaisedButton20_Click);
+            // 
+            // materialLabel24
+            // 
+            this.materialLabel24.AutoSize = true;
+            this.materialLabel24.Depth = 0;
+            this.materialLabel24.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel24.Location = new System.Drawing.Point(82, 352);
+            this.materialLabel24.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel24.Name = "materialLabel24";
+            this.materialLabel24.Size = new System.Drawing.Size(110, 19);
+            this.materialLabel24.TabIndex = 8;
+            this.materialLabel24.Text = "EvaluationDate";
+            // 
+            // GEvaluation
+            // 
+            this.GEvaluation.FormattingEnabled = true;
+            this.GEvaluation.Location = new System.Drawing.Point(248, 235);
+            this.GEvaluation.Name = "GEvaluation";
+            this.GEvaluation.Size = new System.Drawing.Size(239, 21);
+            this.GEvaluation.TabIndex = 7;
+            this.GEvaluation.Click += new System.EventHandler(this.GEvaluation_Click);
+            // 
+            // materialLabel23
+            // 
+            this.materialLabel23.AutoSize = true;
+            this.materialLabel23.Depth = 0;
+            this.materialLabel23.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel23.Location = new System.Drawing.Point(82, 249);
+            this.materialLabel23.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel23.Name = "materialLabel23";
+            this.materialLabel23.Size = new System.Drawing.Size(93, 19);
+            this.materialLabel23.TabIndex = 6;
+            this.materialLabel23.Text = "EvalautionID";
+            // 
+            // materialLabel22
+            // 
+            this.materialLabel22.AutoSize = true;
+            this.materialLabel22.Depth = 0;
+            this.materialLabel22.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel22.Location = new System.Drawing.Point(82, 183);
+            this.materialLabel22.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel22.Name = "materialLabel22";
+            this.materialLabel22.Size = new System.Drawing.Size(63, 19);
+            this.materialLabel22.TabIndex = 5;
+            this.materialLabel22.Text = "GroupID";
+            // 
+            // GDateTimePicker
+            // 
+            this.GDateTimePicker.Location = new System.Drawing.Point(248, 350);
+            this.GDateTimePicker.Name = "GDateTimePicker";
+            this.GDateTimePicker.Size = new System.Drawing.Size(239, 20);
+            this.GDateTimePicker.TabIndex = 4;
+            // 
+            // GComboBox
+            // 
+            this.GComboBox.FormattingEnabled = true;
+            this.GComboBox.Location = new System.Drawing.Point(248, 181);
+            this.GComboBox.Name = "GComboBox";
+            this.GComboBox.Size = new System.Drawing.Size(239, 21);
+            this.GComboBox.TabIndex = 3;
+            this.GComboBox.SelectedIndexChanged += new System.EventHandler(this.GComboBox_SelectedIndexChanged);
+            this.GComboBox.Click += new System.EventHandler(this.GComboBox_Click);
+            // 
+            // GOtainedMarks
+            // 
+            this.GOtainedMarks.Depth = 0;
+            this.GOtainedMarks.Hint = "";
+            this.GOtainedMarks.Location = new System.Drawing.Point(248, 288);
+            this.GOtainedMarks.MaxLength = 32767;
+            this.GOtainedMarks.MouseState = MaterialSkin.MouseState.HOVER;
+            this.GOtainedMarks.Name = "GOtainedMarks";
+            this.GOtainedMarks.PasswordChar = '\0';
+            this.GOtainedMarks.SelectedText = "";
+            this.GOtainedMarks.SelectionLength = 0;
+            this.GOtainedMarks.SelectionStart = 0;
+            this.GOtainedMarks.Size = new System.Drawing.Size(239, 23);
+            this.GOtainedMarks.TabIndex = 2;
+            this.GOtainedMarks.TabStop = false;
+            this.GOtainedMarks.UseSystemPasswordChar = false;
+            // 
+            // materialLabel21
+            // 
+            this.materialLabel21.AutoSize = true;
+            this.materialLabel21.Depth = 0;
+            this.materialLabel21.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel21.Location = new System.Drawing.Point(82, 303);
+            this.materialLabel21.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel21.Name = "materialLabel21";
+            this.materialLabel21.Size = new System.Drawing.Size(114, 19);
+            this.materialLabel21.TabIndex = 1;
+            this.materialLabel21.Text = "Obtained Marks";
+            this.materialLabel21.Click += new System.EventHandler(this.materialLabel21_Click);
+            // 
+            // materialRaisedButton19
+            // 
+            this.materialRaisedButton19.AutoSize = true;
+            this.materialRaisedButton19.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton19.Depth = 0;
+            this.materialRaisedButton19.Icon = null;
+            this.materialRaisedButton19.Location = new System.Drawing.Point(373, 87);
+            this.materialRaisedButton19.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton19.Name = "materialRaisedButton19";
+            this.materialRaisedButton19.Primary = true;
+            this.materialRaisedButton19.Size = new System.Drawing.Size(152, 36);
+            this.materialRaisedButton19.TabIndex = 0;
+            this.materialRaisedButton19.Text = "Group Evaluation";
+            this.materialRaisedButton19.UseVisualStyleBackColor = true;
+            // 
             // materialTabSelector1
             // 
             this.materialTabSelector1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1199,6 +1579,70 @@
             this.materialTabSelector1.TabIndex = 1;
             this.materialTabSelector1.Text = "materialTabSelector1";
             this.materialTabSelector1.Click += new System.EventHandler(this.materialTabSelector1_Click);
+            // 
+            // materialRaisedButton22
+            // 
+            this.materialRaisedButton22.AutoSize = true;
+            this.materialRaisedButton22.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton22.Depth = 0;
+            this.materialRaisedButton22.Icon = null;
+            this.materialRaisedButton22.Location = new System.Drawing.Point(390, 153);
+            this.materialRaisedButton22.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton22.Name = "materialRaisedButton22";
+            this.materialRaisedButton22.Primary = true;
+            this.materialRaisedButton22.Size = new System.Drawing.Size(84, 36);
+            this.materialRaisedButton22.TabIndex = 1;
+            this.materialRaisedButton22.Text = "Report 2";
+            this.materialRaisedButton22.UseVisualStyleBackColor = true;
+            this.materialRaisedButton22.Click += new System.EventHandler(this.materialRaisedButton22_Click);
+            // 
+            // materialRaisedButton23
+            // 
+            this.materialRaisedButton23.AutoSize = true;
+            this.materialRaisedButton23.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton23.Depth = 0;
+            this.materialRaisedButton23.Icon = null;
+            this.materialRaisedButton23.Location = new System.Drawing.Point(390, 229);
+            this.materialRaisedButton23.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton23.Name = "materialRaisedButton23";
+            this.materialRaisedButton23.Primary = true;
+            this.materialRaisedButton23.Size = new System.Drawing.Size(84, 36);
+            this.materialRaisedButton23.TabIndex = 2;
+            this.materialRaisedButton23.Text = "Report 3";
+            this.materialRaisedButton23.UseVisualStyleBackColor = true;
+            this.materialRaisedButton23.Click += new System.EventHandler(this.materialRaisedButton23_Click);
+            // 
+            // materialRaisedButton24
+            // 
+            this.materialRaisedButton24.AutoSize = true;
+            this.materialRaisedButton24.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton24.Depth = 0;
+            this.materialRaisedButton24.Icon = null;
+            this.materialRaisedButton24.Location = new System.Drawing.Point(390, 291);
+            this.materialRaisedButton24.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton24.Name = "materialRaisedButton24";
+            this.materialRaisedButton24.Primary = true;
+            this.materialRaisedButton24.Size = new System.Drawing.Size(84, 36);
+            this.materialRaisedButton24.TabIndex = 3;
+            this.materialRaisedButton24.Text = "Report 4";
+            this.materialRaisedButton24.UseVisualStyleBackColor = true;
+            this.materialRaisedButton24.Click += new System.EventHandler(this.materialRaisedButton24_Click);
+            // 
+            // materialRaisedButton25
+            // 
+            this.materialRaisedButton25.AutoSize = true;
+            this.materialRaisedButton25.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton25.Depth = 0;
+            this.materialRaisedButton25.Icon = null;
+            this.materialRaisedButton25.Location = new System.Drawing.Point(390, 360);
+            this.materialRaisedButton25.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton25.Name = "materialRaisedButton25";
+            this.materialRaisedButton25.Primary = true;
+            this.materialRaisedButton25.Size = new System.Drawing.Size(84, 36);
+            this.materialRaisedButton25.TabIndex = 4;
+            this.materialRaisedButton25.Text = "Report 5";
+            this.materialRaisedButton25.UseVisualStyleBackColor = true;
+            this.materialRaisedButton25.Click += new System.EventHandler(this.materialRaisedButton25_Click);
             // 
             // Form1
             // 
@@ -1232,6 +1676,13 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1314,6 +1765,34 @@
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton13;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton12;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton15;
+        private System.Windows.Forms.TabPage tabPage6;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton16;
+        private System.Windows.Forms.TabPage tabPage7;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton18;
+        private MaterialSkin.Controls.MaterialSingleLineTextField eWeightage;
+        private MaterialSkin.Controls.MaterialLabel materialLabel20;
+        private MaterialSkin.Controls.MaterialSingleLineTextField eMarks;
+        private MaterialSkin.Controls.MaterialLabel materialLabel19;
+        private MaterialSkin.Controls.MaterialSingleLineTextField eName;
+        private MaterialSkin.Controls.MaterialLabel materialLabel18;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton17;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.ComboBox GComboBox;
+        private MaterialSkin.Controls.MaterialSingleLineTextField GOtainedMarks;
+        private MaterialSkin.Controls.MaterialLabel materialLabel21;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton19;
+        private System.Windows.Forms.ComboBox GEvaluation;
+        private MaterialSkin.Controls.MaterialLabel materialLabel23;
+        private MaterialSkin.Controls.MaterialLabel materialLabel22;
+        private System.Windows.Forms.DateTimePicker GDateTimePicker;
+        private MaterialSkin.Controls.MaterialLabel materialLabel24;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton20;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton21;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton22;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton25;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton24;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton23;
     }
 }
 

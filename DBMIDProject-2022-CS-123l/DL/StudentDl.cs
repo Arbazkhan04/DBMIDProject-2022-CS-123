@@ -21,6 +21,23 @@ namespace DBMIDProject_2022_CS_123l.DL
             cmd.ExecuteNonQuery();
         }
 
+        public static void deleteStudent(int id)
+        {
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("DELETE FROM student WHERE Id = @Id", con);
+            cmd.Parameters.AddWithValue("@Id", id);
+            cmd.ExecuteNonQuery();
+        }
+
+        public static void updateStudent(int id, Student student)
+        {
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("UPDATE student SET RegistrationNo = @RegistrationNo WHERE Id = @Id", con);
+            cmd.Parameters.AddWithValue("@RegistrationNo", student.regNo);
+            cmd.Parameters.AddWithValue("@Id", id);
+            cmd.ExecuteNonQuery();
+        }
+
         public static int nextStudentId()
         {
             var con = Configuration.getInstance().getConnection();

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using DBMIDProject_2022_CS_123l.BL;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace DBMIDProject_2022_CS_123l.DL
 {
@@ -45,6 +46,16 @@ namespace DBMIDProject_2022_CS_123l.DL
             cmd.Parameters.AddWithValue("@GroupId", groupId);
             cmd.Parameters.AddWithValue("@AssignmentDate", DateTime.Now);
             cmd.ExecuteNonQuery();
+        }
+
+
+        // delete the studne form groupStudent table by id
+        public static void deleteStudentGroupById(int id)
+        {
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmdDeleteStatus = new SqlCommand("DELETE FROM GroupStudent WHERE StudentId = @Id", con);
+            cmdDeleteStatus.Parameters.AddWithValue("@Id", id);
+            cmdDeleteStatus.ExecuteNonQuery();
         }
 
     }

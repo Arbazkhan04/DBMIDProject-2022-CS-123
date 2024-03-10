@@ -61,5 +61,19 @@ namespace DBMIDProject_2022_CS_123l.DL
             cmd.Parameters.AddWithValue("@Id", id); 
             cmd.ExecuteNonQuery();
         }
+
+
+        //add advisor to the project
+        public static void addAdvisorToProject(int projectId, int advisorId, int role)
+        {
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("INSERT INTO ProjectAdvisor (AdvisorId, ProjectId, AdvisorRole, AssignmentDate) VALUES (@AdvisorId, @ProjectId, @AdvisorRole, @AssignmentDate)", con);
+            cmd.Parameters.AddWithValue("@AdvisorId", advisorId);
+            cmd.Parameters.AddWithValue("@ProjectId", projectId);
+            cmd.Parameters.AddWithValue("@AdvisorRole", role);
+            cmd.Parameters.AddWithValue("@AssignmentDate", DateTime.Today); // Ensure AssignmentDate is compatible with the data type in the database schema
+            cmd.ExecuteNonQuery();
+        }
+
     }
 }
